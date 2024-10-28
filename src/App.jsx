@@ -17,12 +17,10 @@ import ProductDetails from './Component/ProductDetails/ProductDetails';
 import CartContextProvider from './Context/CartContext';
 import { Toaster } from '../node_modules/react-hot-toast/src/components/toaster';
 import CashPayment from './Component/CashPayment/CashPayment';
-import SplashScreen from './Component/SplashScreen/SplashScreen';
 
 const router = createBrowserRouter([{path:'' , element: <Layout/> ,children:[
   {path:'register' , element : <Register/>},
-  {path:'login' , element : <Login/>},
-  {path:'SplashScreen' , element : <SplashScreen/>},
+  {path:'/' , element : <Login/>},
   {path:'ProductDetails/:id' , element :<ProtectedRoute> <ProductDetails/> </ProtectedRoute>},
   {path:'Home' , element :<ProtectedRoute> <Home/> </ProtectedRoute>},
   {path:'Brands' , element : <ProtectedRoute> <Brands/> </ProtectedRoute>},
@@ -48,7 +46,7 @@ export default function App() {
             <Offline>
               <div className="fixed inset-0 flex items-center justify-center bg-gray-800 text-white">
                 <div className="p-8 rounded-lg shadow-lg bg-red-600 text-center">
-                  <h1 className="text-2xl font-bold">You're Offline!</h1>
+                  <h1 className="text-2xl font-bold">You are Offline!</h1>
                   <p className="mt-2">Please check your internet connection and try again.</p>
                 </div>
               </div>
